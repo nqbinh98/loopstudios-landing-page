@@ -1,0 +1,62 @@
+// __feature.scss
+@use '../util' as u;
+// @use '../globals' as g;
+
+.feature {
+    font-family: u.$font-josefin;
+    padding: 4rem 2rem 0;
+
+    &__img img {
+        width: 100%;
+    }
+
+    &__content {
+        text-align: center;
+        padding: 1rem;
+        
+        h2 {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 2rem;
+        }
+
+        p {
+            color: var(--black-color);
+            opacity: .5;
+            line-height: 1.5;
+        }
+    }
+}
+
+@media (min-width: 56.25rem) { 
+
+    .feature {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        position: relative;
+        padding: 0;
+
+        &__img {
+            grid-column: 1 / 4;
+        }
+
+        &__content {
+            grid-column: 4 / 6;
+            position: absolute;
+            left: -40%;
+            text-align: unset;
+            background-color: white;
+            padding: 2rem 0 0 8rem;
+            bottom: 0;
+
+            h2 {
+                font-size: 3rem;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+}

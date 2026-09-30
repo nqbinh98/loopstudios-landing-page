@@ -1,0 +1,41 @@
+// _boilerplate.scss
+@use '../util' as u;
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    position: relative;
+}
+
+li:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+@media (min-width: 56.25rem) {
+    .container {
+        padding: 8rem 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+    }
+}

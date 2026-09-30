@@ -1,0 +1,90 @@
+// _creations.scss
+@use '../util' as u;
+
+.creations {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: u.$font-josefin;
+    padding: 3rem 2rem;
+
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 300;
+        font-size: 2rem;
+    }
+    
+    &__content {
+        display: grid;
+        justify-items: center;
+        justify-content: center;
+        gap: 1rem;
+        &-item {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+
+            span {
+                text-transform: uppercase;
+                color: white;
+                position: absolute;
+                left: 10%;
+                bottom: 20%;
+                font-size: clamp(1rem, 1rem + 2vw, 1.5rem);
+                width: 8rem;
+                font-weight: 200;
+            }
+        }
+    }
+
+    button {
+        font-family: u.$font-josefin;
+        border: 1px solid black;
+        background: none;
+        padding: 0.5rem 2.5rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin-block-start: 1rem;
+    }
+}
+
+@media (min-width: 56.25rem) {
+    .creations {
+        position: relative;
+        align-items: flex-start;
+        padding: 0;
+
+        h2 {
+            font-size: 3rem;
+            margin: 3rem 0;
+        }
+
+        &__content {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4rem;
+            padding: 2rem 0;
+
+            &-item {
+                span {
+                    left: 10%;
+                    bottom: 8%;
+                }
+            }
+        }
+
+        button {
+            &:hover {
+                opacity: .8;
+            }
+            cursor: pointer;
+            position: absolute;
+            top: 3rem;
+            right: 0;
+            font-family: 'Alata', sans-serif;
+        }
+    }
+}
