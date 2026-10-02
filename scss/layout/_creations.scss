@@ -21,7 +21,12 @@
         justify-items: center;
         justify-content: center;
         gap: 1rem;
+
         &-item {
+            &:hover {
+                opacity: .8;
+            }
+            cursor: pointer;
             position: relative;
 
             img {
